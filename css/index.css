@@ -237,9 +237,9 @@ main .home__buttons .btn:hover {
   background: #f1ebdd;
   border: 1px solid #6c1814;
   color: #79272f;
-  -webkit-animation: fade-in 0.2s ease-in 1 normal;
-  -moz-animation: fade-in 0.2s ease-in 1 normal;
-  animation: fade-in 0.2s ease-in 1 normal;
+  -webkit-animation: fade-in 0.3s ease-in 1 normal;
+  -moz-animation: fade-in 0.3s ease-in 1 normal;
+  animation: fade-in 0.3s ease-in 1 normal;
 }
 @-moz-keyframes fade-in {
   0% {
