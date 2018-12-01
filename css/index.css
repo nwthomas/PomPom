@@ -230,7 +230,7 @@ main .home__timer {
 }
 @media (max-width: 500px) {
   main .home__timer {
-    margin: 13vh 0 15vh 0;
+    margin: 8vh 0 9vh 0;
   }
 }
 main .home__timer .timer__text {
@@ -267,8 +267,9 @@ main .home__buttons .btn {
 }
 @media (max-width: 500px) {
   main .home__buttons .btn {
-    width: 47%;
+    margin: 0.5% 0.5%;
     max-width: 100%;
+    width: 47%;
   }
 }
 main .home__buttons .btn:hover {
