@@ -204,8 +204,14 @@ main header h1 {
   display: inline-block;
   margin: 0 0.5% 0 0.8%;
 }
+main .home__timer {
+  margin: 14vh 0 15vh 0;
+}
+main .home__timer .timer__text {
+  font-size: 4rem;
+  font-weight: 700;
+}
 main .home__buttons {
-  margin-top: 30vh;
   width: 100%;
   align-items: flex-start;
   display: flex;
@@ -223,8 +229,8 @@ main .home__buttons .btn {
   padding: 14px 0;
   text-align: center;
   cursor: pointer;
-  font-weight: 500;
-  margin: 0 0.3%;
+  font-weight: 700;
+  margin: 0 0.5%;
   width: 158px;
 }
 main .home__buttons .btn:hover {
