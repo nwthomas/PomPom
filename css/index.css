@@ -164,8 +164,17 @@ img {
   width: 100%;
 }
 footer {
-  position: fixed;
   bottom: 0;
+  position: fixed;
+}
+footer p {
+  color: #ecdcbf;
+  font-size: 1rem;
+}
+footer p a {
+  color: #ecdcbf;
+  cursor: default;
+  text-decoration: none;
 }
 main {
   width: 100%;
@@ -177,12 +186,12 @@ main header {
   align-items: flex-end;
   flex-wrap: wrap;
   margin-top: 10vh;
-  width: 100%;
 }
 main header .img-container {
-  width: 250px;
   height: auto;
+  width: 250px;
 }
 main header h1 {
-  margin-left: 0.5%;
+  display: inline-block;
+  margin-left: 0.8%;
 }
