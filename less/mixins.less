@@ -1,20 +1,20 @@
 .center(@direction, @justify, @align, @wrap) {
+  align-items: @align;
   display: flex;
   flex-direction: @direction;
-  justify-content: @justify;
-  align-items: @align;
   flex-wrap: @wrap;
+  justify-content: @justify;
 }
 
-.btn-template(@background: @button-bg, @color: white, @radius: 15px, @padding: 13px 2%, @font: 1.8rem) {
-  text-align: center;
+.btn-template(@background: @button-bg, @color: @button-color, @radius: 11px, @padding: 14px 0, @font: 1.6rem) {
   background: @background;
-  color: @color;
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
-  padding: @padding;
+  color: @color;
   font-size: @font;
+  padding: @padding;
+  text-align: center;
 }
 
 .border(@size: 1px, @style: solid, @color: black) {

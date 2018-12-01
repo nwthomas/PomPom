@@ -1,18 +1,48 @@
 main {
   width: 100%;
+  .center(column, flex-start, center, wrap);
 
   header {
     .center(row, center, flex-end, wrap);
-    margin-top: 10vh;
+    margin-top: 8vh;
+    width: 100%;
 
-    .img-container {
+    .img__container {
       height: auto;
       width: 250px;
     }
 
     h1 {
       display: inline-block;
-      margin-left: 0.8%;
+      margin: 0 0.5% 0 0.8%;
+    }
+  }
+
+  .home__buttons {
+    margin-top: 20vh;
+    width: 100%;
+    .center(row, center, flex-start, wrap);
+
+    .btn {
+      .btn-template();
+      font-weight: 500;
+      margin: 0 0.3%;
+      width: 158px;
+
+      &:hover {
+        background: @hover-bg;
+        border: 2px solid @hover-border;
+        // .border(1px solid @hover-border);
+        color: @hover-color;
+      }
+
+      &:active {
+        background: lighten(@active-bg, 3%);
+      }
+
+      &:focus {
+        outline: 0;
+      }
     }
   }
 }
