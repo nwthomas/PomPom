@@ -160,7 +160,7 @@ img {
   max-width: 100%;
 }
 .container {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   max-width: 1100px;
   position: relative;
@@ -169,6 +169,7 @@ img {
 footer {
   bottom: 0;
   position: fixed;
+  opacity: 0;
 }
 footer p {
   color: #ecdcbf;
@@ -250,6 +251,7 @@ main .home__buttons {
   justify-content: center;
 }
 main .home__buttons .btn {
+  -webkit-appearance: none;
   background: #79272f;
   -webkit-border-radius: 11px;
   -moz-border-radius: 11px;
@@ -261,7 +263,6 @@ main .home__buttons .btn {
   cursor: pointer;
   font-weight: 500;
   margin: 0 0.5%;
-  -webkit-appearance: none;
   width: 158px;
 }
 @media (max-width: 500px) {
