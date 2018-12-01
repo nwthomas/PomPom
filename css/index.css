@@ -261,6 +261,7 @@ main .home__buttons .btn {
   cursor: pointer;
   font-weight: 500;
   margin: 0 0.5%;
+  -webkit-appearance: none;
   width: 158px;
 }
 @media (max-width: 500px) {
