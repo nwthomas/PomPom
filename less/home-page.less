@@ -23,7 +23,7 @@ main {
 
     .timer__text {
       font-size: 4rem;
-      font-weight: 700;
+      font-weight: 500;
     }
   }
 
@@ -34,22 +34,21 @@ main {
     .btn {
       .btn-template();
       cursor: pointer;
-      font-weight: 700;
+      font-weight: 500;
       margin: 0 0.5%;
       width: 158px;
 
       &:hover {
         background: @hover-bg;
-        border: 2px solid @hover-border;
-        // .border(1px solid @hover-border);
+        border: 1px solid @hover-border;
         color: @hover-color;
 
-        // .keyframes(
-        //   fade-in;{0% {background: @button-bg; color: @;} 100% {background: @button-bg;
-        //     color: white;}}
-        // );
+        .keyframes(
+          fade-in;{0% {background: @button-bg; color: @button-color; border: 1px
+            solid @hover-border;} 100% {background: @hover-bg; color: @hover-color;}}
+        );
 
-        // .animation(fade-in 0.5s linear 1 normal);
+        .animation(fade-in 0.2s ease-in 1 normal);
       }
 
       &:active {

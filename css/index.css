@@ -209,7 +209,7 @@ main .home__timer {
 }
 main .home__timer .timer__text {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 main .home__buttons {
   width: 100%;
@@ -229,14 +229,50 @@ main .home__buttons .btn {
   padding: 14px 0;
   text-align: center;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0 0.5%;
   width: 158px;
 }
 main .home__buttons .btn:hover {
   background: #f1ebdd;
-  border: 2px solid #6c1814;
+  border: 1px solid #6c1814;
   color: #79272f;
+  -webkit-animation: fade-in 0.2s ease-in 1 normal;
+  -moz-animation: fade-in 0.2s ease-in 1 normal;
+  animation: fade-in 0.2s ease-in 1 normal;
+}
+@-moz-keyframes fade-in {
+  0% {
+    background: #79272f;
+    color: #f1ebdd;
+    border: 1px solid #6c1814;
+  }
+  100% {
+    background: #f1ebdd;
+    color: #79272f;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    background: #79272f;
+    color: #f1ebdd;
+    border: 1px solid #6c1814;
+  }
+  100% {
+    background: #f1ebdd;
+    color: #79272f;
+  }
+}
+@keyframes fade-in {
+  0% {
+    background: #79272f;
+    color: #f1ebdd;
+    border: 1px solid #6c1814;
+  }
+  100% {
+    background: #f1ebdd;
+    color: #79272f;
+  }
 }
 main .home__buttons .btn:active {
   background: #efe6b5;
