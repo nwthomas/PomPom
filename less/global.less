@@ -15,18 +15,30 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 1.6rem;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+h1 {
+  color: @h1-color;
+  font-size: 10rem;
+  font-weight: 400;
+  letter-spacing: -7px;
+}
+
+p {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 1.6rem;
 }
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 .container {
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-  .border();
   height: 100vh;
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+  width: 100%;
 }
