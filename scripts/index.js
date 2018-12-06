@@ -64,8 +64,9 @@ function runBreak() {
 function resetTimer() {
   clearInterval(timer);
   btnRunningObj.pomodoro = false;
-  minTens.textContent = 2;
-  minOnes.textContent = 5;
+  btnRunningObj.break = false;
+  minTens.textContent = 0;
+  minOnes.textContent = 0;
   secHundreds.textContent = 0;
   secTens.textContent = 0;
 }
@@ -88,13 +89,15 @@ function runBreak() {
     minOnes.textContent = pauseNums.minOnes;
     secHundreds.textContent = pauseNums.secHundreds;
     secTens.textContent = pauseNums.secTens;
-  } else {
+  }
+  if (btnRunningObj.break === false) {
     minTens.textContent = 0;
     minOnes.textContent = 5;
     secHundreds.textContent = 0;
     secTens.textContent = 0;
   }
   btnRunningObj.break = true;
+  btnRunningObj.pomodoro = false;
   btnRunningObj.pause = false;
   clearInterval(timer);
   timer = setInterval(updateSecTens, 1000);
@@ -107,13 +110,15 @@ function runPomodoro() {
     minOnes.textContent = pauseNums.minOnes;
     secHundreds.textContent = pauseNums.secHundreds;
     secTens.textContent = pauseNums.secTens;
-  } else {
+  }
+  if (btnRunningObj.pomodoro === false) {
     minTens.textContent = 2;
     minOnes.textContent = 5;
     secHundreds.textContent = 0;
     secTens.textContent = 0;
   }
   btnRunningObj.pomodoro = true;
+  btnRunningObj.break = false;
   btnRunningObj.pause = false;
   clearInterval(timer);
   timer = setInterval(updateSecTens, 1000);
