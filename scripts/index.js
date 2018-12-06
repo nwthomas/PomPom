@@ -4,7 +4,14 @@ const secHundreds = document.querySelector(".timer__second__hundreds");
 const secTens = document.querySelector(".timer__second__tens");
 let btnRunningObj = {
   pomodoro: false,
-  break: false
+  break: false,
+  pause: false
+};
+let pauseNums = {
+  minTens: 2,
+  minOnes: 5,
+  secHundreds: 0,
+  secTens: 0
 };
 let timer;
 
@@ -65,12 +72,50 @@ function resetTimer() {
 
 function runPause() {
   clearInterval(timer);
+  btnRunningObj.break = false;
   btnRunningObj.pomodoro = false;
+  btnRunningObj.pause = true;
+  pauseNums.minTens = minTens.textContent;
+  pauseNums.minOnes = minOnes.textContent;
+  pauseNums.secHundreds = secHundreds.textContent;
+  pauseNums.secTens = secTens.textContent;
+}
+
+function runBreak() {
+  if (btnRunningObj.break === true) return;
+  if (btnRunningObj.pause === true) {
+    minTens.textContent = pauseNums.minTens;
+    minOnes.textContent = pauseNums.minOnes;
+    secHundreds.textContent = pauseNums.secHundreds;
+    secTens.textContent = pauseNums.secTens;
+  } else {
+    minTens.textContent = 0;
+    minOnes.textContent = 5;
+    secHundreds.textContent = 0;
+    secTens.textContent = 0;
+  }
+  btnRunningObj.break = true;
+  btnRunningObj.pause = false;
+  clearInterval(timer);
+  timer = setInterval(updateSecTens, 1000);
 }
 
 function runPomodoro() {
   if (btnRunningObj.pomodoro === true) return;
+  if (btnRunningObj.pause === true) {
+    minTens.textContent = pauseNums.minTens;
+    minOnes.textContent = pauseNums.minOnes;
+    secHundreds.textContent = pauseNums.secHundreds;
+    secTens.textContent = pauseNums.secTens;
+  } else {
+    minTens.textContent = 2;
+    minOnes.textContent = 5;
+    secHundreds.textContent = 0;
+    secTens.textContent = 0;
+  }
   btnRunningObj.pomodoro = true;
+  btnRunningObj.pause = false;
+  clearInterval(timer);
   timer = setInterval(updateSecTens, 1000);
 }
 
