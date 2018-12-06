@@ -150,7 +150,6 @@ h1 {
 }
 p {
   font-family: "Lato", Helvetica, sans-serif;
-  font-size: 1.6rem;
 }
 a {
   font-family: "Lato", Helvetica, sans-serif;
@@ -234,8 +233,13 @@ main .home__timer {
   }
 }
 main .home__timer .timer__text {
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 500;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 @media (max-width: 500px) {
   main .home__timer .timer__text {
