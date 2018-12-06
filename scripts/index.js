@@ -41,6 +41,8 @@ function updateSecTens() {
     minTens.textContent === "0"
   ) {
     clearInterval(timer);
+    let audio = new Audio("./sounds/chime.mp3");
+    audio.play();
   } else if (secTens.textContent === "0") {
     secTens.textContent = 9;
     updateSecHundreds();
