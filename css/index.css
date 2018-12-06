@@ -207,7 +207,7 @@ main header .img__container {
 }
 @media (max-width: 500px) {
   main header .img__container {
-    width: 100%;
+    width: 80%;
     margin: 0 6%;
   }
 }
@@ -243,7 +243,7 @@ main .home__timer .timer__text {
 }
 @media (max-width: 500px) {
   main .home__timer .timer__text {
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
 }
 main .home__buttons {

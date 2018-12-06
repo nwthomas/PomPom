@@ -14,11 +14,9 @@ let pauseNums = {
   secTens: 0
 };
 let timer;
-
 function updateMinTens() {
   minTens.textContent = parseInt(minTens.textContent) - 1;
 }
-
 function updateMinOnes() {
   if (minOnes.textContent === "0") {
     minOnes.textContent = 9;
@@ -27,7 +25,6 @@ function updateMinOnes() {
     minOnes.textContent = parseInt(minOnes.textContent) - 1;
   }
 }
-
 function updateSecHundreds() {
   if (secHundreds.textContent === "0") {
     secHundreds.textContent = 5;
@@ -36,7 +33,6 @@ function updateSecHundreds() {
     secHundreds.textContent = parseInt(secHundreds.textContent) - 1;
   }
 }
-
 function updateSecTens() {
   if (
     secTens.textContent === "0" &&
@@ -52,15 +48,6 @@ function updateSecTens() {
     secTens.textContent = parseInt(secTens.textContent) - 1;
   }
 }
-
-function runPause() {
-  console.log("Working!");
-}
-
-function runBreak() {
-  console.log("Working!");
-}
-
 function resetTimer() {
   clearInterval(timer);
   btnRunningObj.pomodoro = false;
@@ -70,7 +57,6 @@ function resetTimer() {
   secHundreds.textContent = 0;
   secTens.textContent = 0;
 }
-
 function runPause() {
   clearInterval(timer);
   btnRunningObj.break = false;
@@ -81,7 +67,6 @@ function runPause() {
   pauseNums.secHundreds = secHundreds.textContent;
   pauseNums.secTens = secTens.textContent;
 }
-
 function runBreak() {
   if (btnRunningObj.break === true) return;
   if (btnRunningObj.pause === true) {
@@ -102,7 +87,6 @@ function runBreak() {
   clearInterval(timer);
   timer = setInterval(updateSecTens, 1000);
 }
-
 function runPomodoro() {
   if (btnRunningObj.pomodoro === true) return;
   if (btnRunningObj.pause === true) {
@@ -123,7 +107,6 @@ function runPomodoro() {
   clearInterval(timer);
   timer = setInterval(updateSecTens, 1000);
 }
-
 (function assignBtnClicks() {
   const buttons = document.querySelectorAll("input");
   buttons.forEach(input => {
