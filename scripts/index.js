@@ -58,11 +58,12 @@ function runBreak() {
 }
 
 function resetTimer() {
-  // minTens.textContent = 2;
-  // minOnes.textContent = 5;
-  // secHundreds.textContent = 0;
-  // secTens.textContent = 1;
-  console.log("Working!");
+  clearInterval(timer);
+  btnRunningObj.pomodoro = false;
+  minTens.textContent = 2;
+  minOnes.textContent = 5;
+  secHundreds.textContent = 0;
+  secTens.textContent = 0;
 }
 
 function runPomodoro() {
