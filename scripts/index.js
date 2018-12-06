@@ -4,11 +4,8 @@ const secHundreds = document.querySelector(".timer__second__hundreds");
 const secTens = document.querySelector(".timer__second__tens");
 let btnRunningObj = {
   pomodoro: false,
-  break: false,
-  pause: false,
-  reset: false
+  break: false
 };
-let btnPauseObj = {};
 let timer;
 
 function updateMinTens() {
@@ -64,6 +61,11 @@ function resetTimer() {
   minOnes.textContent = 5;
   secHundreds.textContent = 0;
   secTens.textContent = 0;
+}
+
+function runPause() {
+  clearInterval(timer);
+  btnRunningObj.pomodoro = false;
 }
 
 function runPomodoro() {
