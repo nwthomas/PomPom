@@ -68,7 +68,14 @@ function runPause() {
   btnRunningObj.pomodoro = false;
   btnRunningObj.break = false;
   if (btnRunningObj.reset === true) return;
-  if (btnRunningObj.pause === false) {
+  if (
+    secTens.textContent === "0" &&
+    secHundreds.textContent === "0" &&
+    minOnes.textContent === "0" &&
+    minTens.textContent === "0"
+  ) {
+    return;
+  } else if (btnRunningObj.pause === false) {
     btnRunningObj.pause = true;
     pauseNums.minTens = minTens.textContent;
     pauseNums.minOnes = minOnes.textContent;
