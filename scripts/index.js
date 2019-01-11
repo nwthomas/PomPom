@@ -54,6 +54,7 @@ function updateSecTens() {
 }
 function resetTimer() {
   clearInterval(timer);
+  pauseBtnText.value = "Pause";
   btnRunningObj.pomodoro = false;
   btnRunningObj.break = false;
   btnRunningObj.pause = false;
